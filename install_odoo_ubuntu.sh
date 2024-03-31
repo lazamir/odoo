@@ -325,13 +325,6 @@ server {
   # common gzip
   gzip_types text/css text/less text/plain text/xml application/xml application/json application/javascript;
   gzip on;
-
-
-  client_body_in_file_only clean;
-  client_body_buffer_size 32K;
-  sendfile on;
-  send_timeout 600s;
-  keepalive_timeout 300;
 }
  
 EOF
