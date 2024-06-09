@@ -225,7 +225,7 @@ if [ $IS_ENTERPRISE = "True" ]; then
   # Odoo 15: https://www.soladrive.com/downloads/enterprise-15.0.tar.gz
   
   echo -e "\n======== Adding some enterprise modules ============="
-  wget https://www.soladrive.com/downloads/enterprise-15.0.tar.gz
+  wget https://www.soladrive.com/downloads/enterprise-14.0.tar.gz
   tar -zxvf enterprise-14.0.tar.gz
   cp -rf odoo-14.0*/odoo/addons/* ${OE_HOME}/enterprise/addons
   rm enterprise-14.0.tar.gz
