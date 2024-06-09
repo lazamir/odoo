@@ -27,9 +27,9 @@ INSTALL_WKHTMLTOPDF="True"
 OE_PORT="8069"
 # Choose the Odoo version which you want to install. For example: 14.0, 13.0 or 12.0. When using 'master' the master version will be installed.
 # IMPORTANT! This script contains extra libraries that are specifically needed for Odoo 14.0
-OE_VERSION="15.0"
+OE_VERSION="14.0"
 # Set this to True if you want to install the Odoo enterprise version!
-IS_ENTERPRISE="False"
+IS_ENTERPRISE="True"
 # Set this to True if you want to install Nginx!
 INSTALL_NGINX="True"
 # Set the superadmin password - if GENERATE_RANDOM_PASSWORD is set to "True" we will automatically generate a random password, otherwise we use this one
@@ -226,9 +226,9 @@ if [ $IS_ENTERPRISE = "True" ]; then
   
   echo -e "\n======== Adding some enterprise modules ============="
   wget https://www.soladrive.com/downloads/enterprise-15.0.tar.gz
-  tar -zxvf enterprise-15.0.tar.gz
-  cp -rf odoo-15.0*/odoo/addons/* ${OE_HOME}/enterprise/addons
-  rm enterprise-15.0.tar.gz
+  tar -zxvf enterprise-14.0.tar.gz
+  cp -rf odoo-14.0*/odoo/addons/* ${OE_HOME}/enterprise/addons
+  rm enterprise-14.0.tar.gz
   chown -R $OE_USER:$OE_USER ${OE_HOME}/
 fi
 
